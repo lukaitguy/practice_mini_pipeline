@@ -50,6 +50,7 @@ Transform includes:
 
 # 3. Load (SQL Server)
 Table schema:
+```sql
 CREATE TABLE Customers (
     Id INT IDENTITY(1,1) PRIMARY KEY,
     FullName NVARCHAR(100),
@@ -58,21 +59,25 @@ CREATE TABLE Customers (
     Email NVARCHAR(255),
     UserId NVARCHAR(50)
 );
-
+```
 Python loader:
+```python
 load_to_sql_server(cleaned_rows)
-
+```
 The project uses pyodbc for database communication:
+```python
 conn_str = (
     "Driver={SQL Server};"
     "Server=localhost\\SQLEXPRESS;"
     "Database=CustomerETL;"
     "Trusted_Connection=yes;"
 )
+```
 
 # How to run the Pipeline
-
+```python
 python etl/main.py
+```
 
 main.py orchestrates the pipeline:
   - extract from CSV
