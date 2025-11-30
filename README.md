@@ -14,6 +14,7 @@ implemented entirely in Python using a custom CSV parser and SQL Server
 - Modular structure: extract, transform, load
 
 # Folder Structure
+```
 project-root/
 │
 ├── data/
@@ -27,6 +28,7 @@ project-root/
 │   └── main.py
 │
 └── README.md
+```
 
 # Tech Stack
 - Python
